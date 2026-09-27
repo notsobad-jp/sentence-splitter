@@ -1,6 +1,6 @@
 {
   "name": "sentence-splitter",
-  "version": "5.0.1",
+  "version": "5.0.1-notsobad.1",
   "description": "split {japanese, english} text into sentences.",
   "keywords": [
     "text",
@@ -8,13 +8,13 @@
     "textlint",
     "nlp"
   ],
-  "homepage": "https://github.com/textlint-rule/sentence-splitter",
+  "homepage": "https://github.com/notsobad-jp/sentence-splitter",
   "bugs": {
-    "url": "https://github.com/textlint-rule/sentence-splitter/issues"
+    "url": "https://github.com/notsobad-jp/sentence-splitter/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/textlint-rule/sentence-splitter.git"
+    "url": "git+https://github.com/notsobad-jp/sentence-splitter.git"
   },
   "license": "MIT",
   "author": "azu",
@@ -64,7 +64,6 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "postcommit": "git reset",
     "precommit": "lint-staged",
-    "prepare": "git rev-parse --is-inside-work-tree > /dev/null 2>&1 && git config --local core.hooksPath .githooks || echo 'Not inside a Git work tree'",
     "prepublishOnly": "pnpm run clean && pnpm run build",
     "prepublish": "pnpm run --if-present build",
     "site:build": "vite build",

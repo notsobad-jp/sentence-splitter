@@ -136,6 +136,8 @@ class SplitParser {
         // update Sentence node's location and range
         const rawValue = this.source.sliceRange(firstChildNode.range[0], endNow.offset);
         const contexts = this.source.consumedContexts
+            // Closed contexts belong to this sentence, not to subsequent sentences.
+            .splice(0)
             .sort((a, b) => {
                 return a.range[0] - b.range[0];
             })
